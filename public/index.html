@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+    <div id="chat-container">
+        <h1>ChatGPT</h1>
+        <input type="radio" name="chat" value="exllama" id="exllama" checked="checked"><label
+            for="exllama">exllama</label>
+        <input type="radio" name="chat" value="chinese" id="chinese"><label for="chinese">chinese</label><br><br>
+        <div id="chat-box"></div>
+        <textarea id="system-input" placeholder="Please enter system prompt!">You are a helpful assistant</textarea>
+        <textarea id="user-input" placeholder="Please enter your message!"></textarea><br><br>
+        <div>
+            token_number: <span id="token_length">0</span> 个<br>
+            character_number: <span id="character_length">0</span> 个<br>
+            spend_time: <span id="spend_time">0</span> s<br>
+            token_efficiency: <span id="token_efficiency">0</span> 个/s<br>
+            character_efficiency: <span id="character_efficiency">0</span> 个/s
+        </div><br>
+        <button id="send-button" class="send-button">Send</button><br><br>
+        <button id="stop-button" class="stop-button">Stop</button>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
